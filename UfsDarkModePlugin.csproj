@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net462</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <AssemblyName>ServerManager.Plugin.UfsDarkMode</AssemblyName>
+    <RootNamespace>Ufs.DarkMode</RootNamespace>
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <Product>UFS Dark Mode</Product>
+    <Description>UFS dark theme plugin for ARK Server Manager</Description>
+    <RepositoryUrl>https://github.com/basjuh/ASM-dark-mode-plugin</RepositoryUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Deterministic>true</Deterministic>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <EnableDefaultCompileItems>true</EnableDefaultCompileItems>
+    <AsmInstallPath Condition="'$(AsmInstallPath)' == '' and '$(ARK_SERVER_MANAGER)' != ''">$(ARK_SERVER_MANAGER)</AsmInstallPath>
+    <AsmInstallPath Condition="'$(AsmInstallPath)' == ''">C:\Program Files\ArkServerManager</AsmInstallPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ServerManager.Plugin.Common">
+      <HintPath>$(AsmInstallPath)\ServerManager.Plugin.Common.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="System.Xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="all" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Theme.xaml">
+      <LogicalName>Ufs.DarkMode.Theme.xaml</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\ufs-logo.png" LogicalName="Ufs.DarkMode.Assets.ufs-logo.png" />
+  </ItemGroup>
+</Project>
