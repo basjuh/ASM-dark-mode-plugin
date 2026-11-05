@@ -360,11 +360,6 @@ namespace Ufs.DarkMode
                 {
                     Walk(element);
                 }
-
-                if (element is Window)
-                {
-                    UfsBrandingInjector.EnsureInjected();
-                }
             }
             catch (Exception ex)
             {
@@ -391,8 +386,6 @@ namespace Ufs.DarkMode
                     LastError = ex.ToString();
                 }
             }
-
-            UfsBrandingInjector.EnsureInjected();
         }
 
         private static void Walk(DependencyObject parent)

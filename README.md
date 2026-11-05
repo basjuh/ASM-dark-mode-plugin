@@ -4,7 +4,7 @@ A dark theme plugin for ARK: Survival Evolved Server Manager (ASM) that applies 
 
 [Unofficial Servers](https://unofficial-servers.com/) | [UFS ARK server list](https://unofficial-servers.com/servers/ark-survival-evolved)
 
-**Version 1.0**
+**Version 1.0.1**
 
 ![UFS Dark Mode running in ARK Server Manager](docs/preview.png)
 
@@ -14,7 +14,6 @@ A dark theme plugin for ARK: Survival Evolved Server Manager (ASM) that applies 
 - Dark text boxes, combo boxes, sliders, check boxes, radio buttons and scroll bars
 - Dark tables with orange headers, alternating rows and a subtle selected row
 - All settings sections expand when a server page loads so the form is themed in one pass
-- UFS logo button in the ASM header next to Discord, linking to the UFS ARK server list
 - Dark title bars on Windows 10 and Windows 11
 - Single standalone DLL, loaded through the normal ASM plugin system
 
@@ -50,15 +49,21 @@ The output is `bin\Release\ServerManager.Plugin.UfsDarkMode.dll`.
 
 ## How it works
 
-ASM loads plugin DLLs from its `Plugins` folder. This plugin implements `IPlugin` from `ServerManager.Plugin.Common`, waits for ASM windows, inserts the UFS theme into the local resource scope used by ASM controls, and applies the palette across the visual tree. It also injects the UFS header button and opens the settings sections.
+ASM loads plugin DLLs from its `Plugins` folder. This plugin implements `IPlugin` from `ServerManager.Plugin.Common`, waits for ASM windows, inserts the UFS theme into the local resource scope used by ASM controls, and applies the palette across the visual tree. It also opens the settings sections.
 
-No data is collected or sent anywhere. The only network action is opening the UFS ARK server list when the UFS header button is clicked.
+No data is collected or sent anywhere, and the plugin makes no network requests.
 
 ## Links
 
 - [Unofficial Servers](https://unofficial-servers.com/)
 - [UFS ARK server list](https://unofficial-servers.com/servers/ark-survival-evolved)
 - [ARK Server Manager releases](https://github.com/Bletch1971/ServerManagers)
+
+## Changelog
+
+### 1.0.1
+
+- Removed the UFS header button.
 
 ## License
 

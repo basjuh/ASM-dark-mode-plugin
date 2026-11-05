@@ -5,8 +5,8 @@
     <AssemblyName>ServerManager.Plugin.UfsDarkMode</AssemblyName>
     <RootNamespace>Ufs.DarkMode</RootNamespace>
     <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
-    <AssemblyVersion>1.0.0.0</AssemblyVersion>
-    <FileVersion>1.0.0.0</FileVersion>
+    <AssemblyVersion>1.0.1.0</AssemblyVersion>
+    <FileVersion>1.0.1.0</FileVersion>
     <Product>UFS Dark Mode</Product>
     <Description>UFS dark theme plugin for ARK Server Manager</Description>
     <RepositoryUrl>https://github.com/basjuh/ASM-dark-mode-plugin</RepositoryUrl>
@@ -34,6 +34,5 @@
     <EmbeddedResource Include="Theme.xaml">
       <LogicalName>Ufs.DarkMode.Theme.xaml</LogicalName>
     </EmbeddedResource>
-    <EmbeddedResource Include="Assets\ufs-logo.png" LogicalName="Ufs.DarkMode.Assets.ufs-logo.png" />
   </ItemGroup>
 </Project>
