@@ -6,7 +6,7 @@ A dark theme plugin for ARK: Survival Evolved Server Manager (ASM) that applies 
 
 **Version 1.0**
 
-![UFS Dark Mode preview](docs/preview.png)
+![UFS Dark Mode running in ARK Server Manager](docs/preview.png)
 
 ## Features
 
